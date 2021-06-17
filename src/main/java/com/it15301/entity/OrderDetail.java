@@ -52,6 +52,12 @@ public class OrderDetail {
 			)
 	private Order order;
 	
-	@OneToMany(mappedBy = "orderDetail")
-	private List<Product> products;
+//	@OneToMany(mappedBy = "orderDetail")
+//	private List<Product> products;
+	@ManyToOne()
+	@JoinColumn(
+			name = "product_id",
+			referencedColumnName = "id"
+			)
+	private Product product;
 }

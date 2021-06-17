@@ -43,8 +43,8 @@ public class Product {
 	@Column(name="create_date")
 	private Date createDate;
 	
-	@Column(name="available")
-	private Integer available;
+	@Column(name="avaliable")
+	private Integer avaliable;
 
 	@ManyToOne()
 	@JoinColumn(
@@ -53,10 +53,12 @@ public class Product {
 			)
 	private Category category;
 	
-	@ManyToOne()
-	@JoinColumn(
-			name = "order_detail_id",
-			referencedColumnName = "id"
-			)
-	private OrderDetail orderDetail;
+//	@ManyToOne()
+//	@JoinColumn(
+//			name = "order_detail_id",
+//			referencedColumnName = "id"
+//			)
+//	private OrderDetail orderDetail;
+	@OneToMany(mappedBy = "product")
+	List<OrderDetail> orderDetails;
 }

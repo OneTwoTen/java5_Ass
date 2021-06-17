@@ -9,6 +9,17 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.it15301.entity.Category;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductDTO {
 	private Integer id;
 	
@@ -16,19 +27,20 @@ public class ProductDTO {
 	@NotBlank
 	private String name;
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private String image;
 	
 	@NotNull
-	@NotEmpty
 	private Integer price;
 	
-	@NotNull
-	@DateTimeFormat(pattern="dd-MMM-yyyy")
+//	@NotNull
+//	@DateTimeFormat(pattern="dd-MMM-yyyy")
 	private Date createDate;
 	
 	@NotNull
-	@NotEmpty
-	private Integer available;
+	private Integer avaliable;
+	
+	@NotNull
+	private Category category;
 }

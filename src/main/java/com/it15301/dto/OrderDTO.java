@@ -25,15 +25,15 @@ import lombok.Setter;
 public class OrderDTO {
 
 	private Integer id;
-	@NotNull
-	@DateTimeFormat(pattern="dd-MMM-yyyy")
+//	@NotNull
+//	@DateTimeFormat(pattern="dd-MMM-yyyy")
 	private Date createDate;
 	
 	@NotNull
 	@NotBlank
 	private String address;
 
-	@NotNull
-	@NotEmpty
+//	@NotNull
+//	@NotEmpty
 	private User user;
 }

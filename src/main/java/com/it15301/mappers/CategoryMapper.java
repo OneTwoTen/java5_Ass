@@ -2,10 +2,11 @@ package com.it15301.mappers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.it15301.dto.CategoryDTO;
 import com.it15301.entity.Category;
-
+@Service
 public class CategoryMapper {
 	@Autowired
 	private ModelMapper modelMapper;

@@ -18,11 +18,6 @@ public class UserServiceImpl implements UserService{
 	UserRepository userrepo;
 
 	@Override
-	public User findByUsername(String username) {
-		return userrepo.findByUsername(username);
-	}
-
-	@Override
 	public <S extends User> S save(S entity) {
 		return userrepo.save(entity);
 	}
@@ -166,6 +161,5 @@ public class UserServiceImpl implements UserService{
 	public <S extends User> List<S> findAll(Example<S> example, Sort sort) {
 		return userrepo.findAll(example, sort);
 	}
-	
 	
 }

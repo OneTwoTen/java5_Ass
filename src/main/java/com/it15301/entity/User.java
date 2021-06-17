@@ -46,5 +46,5 @@ public class User {
 	private Integer admin;
 	
 	@OneToMany(mappedBy = "user")
-	private List<Order> oders;
+	private List<Order> orders;
 }
